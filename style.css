@@ -1,4 +1,52 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color:black;
+}
+
+h1 {
+    color:gray;
+    margin: 10%;
+}
+
+div.container {
+    border-radius: 25px;
+    width: 30em;
+    height: 25em;
+    position: relative;
+    margin: 0;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
 
 
+div.medium_container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#amtInput {
+    margin-left: 15%;
+}
+
+#yrsInput {
+    margin-left: 8%
+}
+
+input[type="range" i] {
+    appearance: slider-horizontal;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    cursor: default;
+    padding: initial;
+    border: initial;
+    margin: 2px;
+    margin-left: 7%;
+}
+
+#copyright {
+    position: absolute;
+    left: 10;
+    bottom: 10;
+}

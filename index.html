@@ -4,13 +4,39 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <div class="container">
+            <h1><b>Simple Interest Calculator</b></h1>
+            <div class="medium_container">
+                Amount    <span id="amtInput"><input type="number"  id="principal"> </span>  
+                <br/>
+                <br/>
+                Interest Rate <input type="range" min="1" max="100" value="3.5" step=.1 class="slider" id="myRange">
+                <span id="demo"></span>
+                <br>
+                <br>
+                No. of Years <span id="yrsInput"><input type="number" min="1" max="100" id="years"></span>
+                <br>
+                <br>
+                <button onclick="compute()">Compute Interest</button>
+                <div>
+                    <p id="result"></p>
+                </div>
+                <p id="copyright">
+                    &copy; Everyone Can Get Rich
+                </p>
+            </div>
+        </div>
 
-        <button onclick="compute()">Compute</button>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = `${this.value} %`;
+            }
+        </script>
+            
     </body>
 </html>
