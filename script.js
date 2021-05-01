@@ -5,6 +5,12 @@ function compute()
     r = document.getElementById("myRange").value;
     y = document.getElementById("years").value;
 
+    if (p < 1) {
+        alert("ALERT!\nPlease enter a postive principle amount");
+        document.getElementById("principal").focus();
+        return;
+    }
+
     rate_percentage = r / 100;
     amount = (p * rate_percentage) * y;
 
